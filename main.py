@@ -17,6 +17,10 @@ not_ready_btn=Button(opening_window,text="No",font=("Arial",30,"bold"),
                      bg="red",fg="black",command=lambda :(not_ready()))
 not_ready_btn.place(x=500,y=300)
 
+o_answer="orange"
+f_answer="red"
+t_answer="green"
+
 #ready and not ready
 
 def ready_start ():
@@ -32,7 +36,7 @@ def ready_start ():
     middle_btn.place(x=800,y=400)
 
     hard_btn=Button(opening_window,text="hard",
-                    bg="red",padx=5,pady=5,font=("Arial",30,"bold"),command=lambda :st_question_easy())
+                    bg="red",padx=5,pady=5,font=("Arial",30,"bold"),command=lambda :st_question_hard())
     hard_btn.place(x=800,y=500)
 
 def not_ready ():
@@ -399,16 +403,16 @@ def st_question_easy ():
     stq=Label(st_question_easy,text="كم عدد الدول في افريقيا",bg="red",padx=5,pady=5,font=("Arial",30,"bold"))
     stq.place(x=600,y=200)
 
-    a_choose=Button(st_question_easy,text="a) 42",font=("Arial",30),bg="orange",command=lambda :(false_st_easy()))
+    a_choose=Button(st_question_easy,text="a) 42",font=("Arial",30),bg=o_answer,command=lambda :(false_st_easy()))
     a_choose.place(x=600,y=280)
 
-    b_choose=Button(st_question_easy,text="b) 56",font=("Arial",30),bg="orange",command=lambda :(false_st_easy()))
+    b_choose=Button(st_question_easy,text="b) 56",font=("Arial",30),bg=o_answer,command=lambda :(false_st_easy()))
     b_choose.place(x=800,y=280)
 
-    c_choose=Button(st_question_easy,text="c) 54",font=("Arial",30),bg="orange",command=lambda :(true_st_easy()))
+    c_choose=Button(st_question_easy,text="c) 54",font=("Arial",30),bg=o_answer,command=lambda :(true_st_easy()))
     c_choose.place(x=600,y=400)
 
-    d_choose=Button(st_question_easy,text="d) 50",font=("Arial",30),bg="orange",command=lambda :(false_st_easy()))
+    d_choose=Button(st_question_easy,text="d) 50",font=("Arial",30),bg=o_answer,command=lambda :(false_st_easy()))
     d_choose.place(x=800,y=400)
 
     next_btn=Button(st_question_easy,text="next",font=("Arial",30),bg="green",command=lambda :(next_st_easy()))
@@ -1309,7 +1313,7 @@ def nd_question_hard ():
 
     ndeighthl=Label(nd_question_hard,text="1,000,000 $",font=("Arial",30),bg="yellow",padx=10,pady=10)
     ndeighthl.place(x=10,y=710)
-
+# Kivy - PyQt5
 def rd_question_hard():
     rd_question_hard = Tk()
     rd_question_hard.title("rd question_hard")
